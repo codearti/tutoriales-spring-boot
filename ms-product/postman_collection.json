@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "2acf2a45-7112-4525-9ebf-646df4e978c3",
+		"name": "servicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3672314"
+	},
+	"item": [
+		{
+			"name": "S01",
+			"item": [
+				{
+					"name": "ms-product /findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/v1",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "NEW",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ms-product /findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/v1/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ms-product /create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Product 1\",\r\n    \"stock\": 15,\r\n    \"price\": 800,\r\n    \"category_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/v1",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ms-product /update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Product 3\",\r\n    \"stock\": 15,\r\n    \"price\": 800,\r\n    \"status\": \"NEW\",\r\n    \"category_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/v1/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ms-product /update stock",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stock\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/v1/2/stock",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"2",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ms-product /delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/v1/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"v1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "swagger-ui",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/swagger-ui/index.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"swagger-ui",
+								"index.html"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
